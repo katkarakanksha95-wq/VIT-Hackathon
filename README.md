@@ -4,7 +4,7 @@ VIT-Hackathon project: WebTrace autonomous website QA. The destination repositor
 
 ## GitHub Pages frontend
 
-The workflow at `.github/workflows/pages.yml` builds the React frontend and deploys `frontend/dist` with repository-specific asset paths and hash routing. GitHub Pages must use **GitHub Actions** as its publishing source, rather than publishing this repository's raw root `index.html`.
+The workflow at `.github/workflows/pages.yml` builds the React frontend and deploys `frontend/dist` with repository-specific asset paths and hash routing. GitHub Pages must use **GitHub Actions** as its publishing source, rather than publishing this repository's raw root `index.html`. Set the repository Actions variable `PAGES_ENABLED=true` to deploy on pushes, or run the Pages workflow manually after enabling Pages. This keeps code-only pushes from attempting deployment before hosting is configured.
 
 GitHub Pages hosts the interface only. FastAPI, SQLite and Playwright require a separate running backend. Until one is connected, the hosted interface shows an explicit connection notice and disables test execution. No demonstration results are invented.
 
