@@ -1,8 +1,10 @@
-# WebTrace
+# WebTrace — VIT-Hackathon
+
+VIT-Hackathon project: WebTrace autonomous website QA. The destination repository's original hackathon commit history is retained.
 
 ## GitHub Pages frontend
 
-The workflow at `.github/workflows/pages.yml` builds the React frontend and deploys `frontend/dist` with `/webtrace/` asset paths and hash routing. GitHub Pages must use **GitHub Actions** as its publishing source, rather than publishing this repository's raw root `index.html`.
+The workflow at `.github/workflows/pages.yml` builds the React frontend and deploys `frontend/dist` with repository-specific asset paths and hash routing. GitHub Pages must use **GitHub Actions** as its publishing source, rather than publishing this repository's raw root `index.html`.
 
 GitHub Pages hosts the interface only. FastAPI, SQLite and Playwright require a separate running backend. Until one is connected, the hosted interface shows an explicit connection notice and disables test execution. No demonstration results are invented.
 
